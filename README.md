@@ -2,14 +2,14 @@
 
 The `MatrixRustSDK` Swift package, built from the same upstream source as
 [element-hq/matrix-rust-components-swift](https://github.com/element-hq/matrix-rust-components-swift)
-`26.10.15`, plus Mac Catalyst and macOS slices in
+`26.11.17`, plus Mac Catalyst and macOS slices in
 `MatrixSDKFFI.xcframework`. Use it exactly like element-hq's package:
 
 ```swift
-.package(url: "https://github.com/haeser/matrix-rust-components-swift", exact: "26.10.15")
+.package(url: "https://github.com/fhaeser/matrix-rust-components-swift", exact: "26.11.17")
 ```
 
-## What differs from element-hq 26.10.15
+## What differs from element-hq 26.11.17
 
 - **The xcframework has two more slices.** element-hq ships `ios-arm64` and
   `ios-arm64_x86_64-simulator`. This build adds `ios-arm64-maccatalyst` and
@@ -17,12 +17,12 @@ The `MatrixRustSDK` Swift package, built from the same upstream source as
 - **`Package.swift` points at this repo's release asset.** Only the
   `checksum` and `url` lines differ from element-hq's manifest.
 - **Nothing else.** `Sources/MatrixRustSDK/*.swift` is byte-identical to
-  element-hq's 26.10.15, and `LICENSE` is theirs (Apache-2.0).
+  element-hq's 26.11.17, and `LICENSE` is theirs (Apache-2.0).
 
 ## How it is built
 
-- Source: [matrix-org/matrix-rust-sdk@97a1589](https://github.com/matrix-org/matrix-rust-sdk/commit/97a1589b70bd122c1d66e0d68ea008d8554076a5),
-  the commit element-hq's 26.10.15 release names.
+- Source: [matrix-org/matrix-rust-sdk@b93751e](https://github.com/matrix-org/matrix-rust-sdk/commit/b93751e93da6949a6a8ef8ff0b2c1c8faacaf677),
+  the commit element-hq's 26.11.17 release names.
 - One build-tooling patch, `xtask/` only (no SDK crate or FFI API change).
   It adds the `aarch64-apple-ios-macabi` target, which upstream declined in
   [matrix-org/matrix-rust-sdk#1915](https://github.com/matrix-org/matrix-rust-sdk/issues/1915).
